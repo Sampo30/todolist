@@ -8,12 +8,12 @@
     min-height: 100vh;
     display: flex;
     justify-content: center;
-    background: linear-gradient(#ed4e4e, #de7873);
+    background: linear-gradient(#daa0eb, #e0c5e9);
     font-family: sans-serif;
   }
   button:hover {
     cursor: pointer;
-    background-color: #73E831;
+    background-color: #c4e825;
   }
   ul {
     list-style-type: none; /* bullet poinit pois */
