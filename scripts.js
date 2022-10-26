@@ -65,3 +65,53 @@ function renderTodos(todos) {
       todoItemsList.append(li);
     });
   }
+// functio joka lisää todot local storageen
+function addToLocalStorage(todos) {
+    // array stringiksi ja talteen .
+    localStorage.setItem('todos', JSON.stringify(todos));
+    // renderöi näytölle
+    renderTodos(todos);
+  }
+  // functio hakemaan kaikki local storage
+  function getFromLocalStorage() {
+    const reference = localStorage.getItem('todos');
+    // jos reference on olemassa
+    if (reference) {
+      // muuttaa takaisin arrayksi ja lisää sen todos arrayhin
+      todos = JSON.parse(reference);
+      renderTodos(todos);
+    }
+  }
+  // valmis ei valmis toggle
+  function toggle(id) {
+    todos.forEach(function(item) {
+      if (item.id == id) {
+        // muuta arvoa
+        item.completed = !item.completed;
+      }
+    });
+  addToLocalStorage(todos);
+  }
+  // poistaa todo todos arraysta, päivittää localstoragen ja renderöi päivitetyn arrayn näytölle
+  function deleteTodo(id) {
+    // suodattaa pois <li> joissa id ja päivittää todos arrayn
+    todos = todos.filter(function(item) {
+      return item.id != id;
+    });
+  // päivitä localStorage
+    addToLocalStorage(todos);
+  }
+  // hae localStoragen
+  getFromLocalStorage();
+  // lisää addEventListener <ul> jossa class=todoItems.
+  todoItemsList.addEventListener('click', function(event) {
+    // tarkista onko event checkboxissa
+    if (event.target.type === 'checkbox') {
+      // muuta tila
+      toggle(event.target.parentElement.getAttribute('data-key'));
+    }
+  // tarkista delete-button
+    if (event.target.classList.contains('delete-button')) {
+      deleteTodo(event.target.parentElement.getAttribute('data-key'));
+    }
+  });
