@@ -8,7 +8,7 @@
     min-height: 100vh;
     display: flex;
     justify-content: center;
-    background: linear-gradient(#daa0eb, #e0c5e9);
+    background: linear-gradient(#b9a2c0, #6c646e);
     font-family: sans-serif;
   }
   button:hover {
@@ -45,7 +45,7 @@
     font-size: 1rem;
   }
   .add-button {
-    background-color: #0000ff;
+    background-color: #1f1f2a;
     color: #fff;
     border: none;
     outline: none;
@@ -78,7 +78,7 @@
   }
   .delete-button {
     float: right;
-    background-color: #dc143c;
+    background-color: #7a041b;
     border: none;
     outline: none;
     border-radius: 7px;
