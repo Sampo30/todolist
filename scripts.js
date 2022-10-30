@@ -32,8 +32,10 @@ function addTodo(item) {
   // Tyhjennetään input box arvo
       todoInput.value = '';
     }
+    // varoitus tyhjästä
     else {
       alert("Tyhjä tehtävä ei käy!");
+      document.todoInput.style.borderColor = "red";
     }
   }
 
