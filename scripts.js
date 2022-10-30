@@ -28,7 +28,8 @@ function addTodo(item) {
       };
   // lisätään se todos arrayhin
       todos.push(todo);
-      renderTodos(todos);
+  // tallennetaan localstorageen
+      addToLocalStorage(todos);
   // Tyhjennetään input box arvo
       todoInput.value = '';
     }
