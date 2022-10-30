@@ -11,10 +11,6 @@
     background: linear-gradient(#b9a2c0, #6c646e);
     font-family: sans-serif;
     background-image: url("DSC_5684.jpg");
-    background-repeat: no-repeat;
-    background-attachment: fixed;  
-    background-size: cover;
-    
   }
   button:hover {
     cursor: pointer;
