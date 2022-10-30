@@ -30,6 +30,7 @@ function addTodo(item) {
       todos.push(todo);
   // tallennetaan localstorageen
       addToLocalStorage(todos);
+      renderTodos(todos);
   // Tyhjennetään input box arvo
       todoInput.value = '';
     }
