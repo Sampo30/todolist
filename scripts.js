@@ -14,6 +14,15 @@ todoForm.addEventListener(`submit`, function(event){
     addTodo(todoInput.value);
 });
 
+//varoitus tyhjästä
+function validate(){
+  var textbox = document.getElementsByClassName('todo-input');
+  // If the field is empty
+  if (textbox.value == ''){
+      alert("Kenttä on tyhjä!");
+      return false;
+  }
+}
 
 // Lisätään add Todo
 function addTodo(item) {
