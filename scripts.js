@@ -15,17 +15,13 @@ todoForm.addEventListener(`submit`, function(event){
 });
 
 //varoitus tyhjästä
-function validateForm() {
-  var x = document.getElementsByClassName["todo-input"].value;
-  if (x == "") {
-    alert("Anna tehtävä!");
-    return false;
-  }
-}
 
 // Lisätään add Todo
 function addTodo(item) {
     // if item is not empty
+    if (item == '') {
+      alert("Anna tehtävä!");
+    }
     if (item !== '') {
       // luo todo objecti, jolla on id, name, and completed properties
       const todo = {
