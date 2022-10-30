@@ -14,6 +14,14 @@ todoForm.addEventListener(`submit`, function(event){
     addTodo(todoInput.value);
 });
 
+//varoitus, jos kenttä täytetty väärin
+function validateForm() {
+  var x = document.forms["todo-form"]["todo-imput"].value;
+  if (x == "") {
+    alert("Anna tehtävä!");
+  }
+}
+
 // Lisätään add Todo
 function addTodo(item) {
     // if item is not empty
