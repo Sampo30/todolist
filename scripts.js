@@ -35,7 +35,7 @@ function addTodo(item) {
     // varoitus tyhjästä
     else {
       alert("Tyhjä tehtävä ei käy!");
-      document.getElementsByClassName('todo-input').style.borderColor='red';
+      document.getElementsByClassName("todo-input").style.borderColor="red";
     }
   }
 
