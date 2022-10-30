@@ -19,9 +19,6 @@ todoForm.addEventListener(`submit`, function(event){
 // Lisätään add Todo
 function addTodo(item) {
     // if item is not empty
-    if (item == '') {
-      alert("Anna tehtävä!");
-    }
     if (item !== '') {
       // luo todo objecti, jolla on id, name, and completed properties
       const todo = {
@@ -34,6 +31,9 @@ function addTodo(item) {
       renderTodos(todos);
   // Tyhjennetään input box arvo
       todoInput.value = '';
+    }
+    else {
+      alert("Tyhjä tehtävä ei käy!");
     }
   }
 
