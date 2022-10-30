@@ -15,12 +15,11 @@ todoForm.addEventListener(`submit`, function(event){
 });
 
 //varoitus tyhjästä
-function validate(){
-  var textbox = document.getElementsByClassName('todo-input');
-  // If the field is empty
-  if (textbox.value == ''){
-      alert("Kenttä on tyhjä!");
-      return false;
+function validateForm() {
+  var x = document.getElementsByClassName["todo-input"].value;
+  if (x == "") {
+    alert("Anna tehtävä!");
+    return false;
   }
 }
 
